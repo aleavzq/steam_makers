@@ -1,0 +1,421 @@
+:root {
+  --primary-color: #E91E63;         /* rosa fuerte */
+  --tertiary-color: #3F51B5;        /* azul oscuro */
+  --complementary-1: #B2EBF2;       /* turquesa pastel */
+  --complementary-2: rgb(212, 132, 206);; 
+  --background-color: #FAFAFA;
+  --container-bg: #f0f0f5;
+  --footer-color: #002A5C;
+  --text-color: #212121;
+  --button-hover-color: #C2185B;
+  --card-border-color: #E1BEE7;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --header-color: black;
+}
+
+/* General */
+body {
+  font-family: 'Poppins', 'Montserrat';
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, var(--primary-color), var(--tertiary-color));
+  padding: 20px 0;
+}
+
+header h1 a {
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: var(--tertiary-color);
+  border-radius: 5px;
+}
+
+/* Hero */
+.hero {
+  background-color: var(--background-color);
+  color: var(--tertiary-color);
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h2 {
+  font-weight: 700;
+}
+
+.hero .btn {
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+  background-color: var(--button-hover-color);
+}
+
+/* Cards */
+.card {
+  border: 1px solid var(--card-border-color);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px var(--card-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: justify;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(63, 81, 181, 0.3);
+}
+
+.card-img-top {
+  width: 100%;
+  max-height: 200%;
+  object-fit: contain;
+}
+
+/* Contador */
+.counter-container {
+  background-color: var(--complementary-1);
+  padding: 50px 0;
+  text-align: center;
+}
+
+.counter {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Footer */
+.footer-onu {
+  background-color: var(--footer-color);
+  color: white;
+  padding: 30px 0;
+}
+
+.footer-onu .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-onu .social-icons img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border: 2px solid white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.footer-onu .social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Sección título */
+.section-title {
+  color: var(--tertiary-color);
+  font-weight: 700;
+  margin-top: 40px;
+}
+
+/* Formulario */
+.formulario-contacto {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--complementary-2);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px var(--card-shadow);
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  border: 1px solid var(--primary-color);
+  box-sizing: border-box;
+}
+
+.formulario-contacto textarea {
+  resize: none;
+}
+
+.formulario-contacto button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-contacto button:hover {
+  background-color: var(--button-hover-color);
+}
+
+/* Botón adicional */
+.btn-success {
+  background-color: #1c8b5c;
+}
+
+.btn-success:hover {
+  background-color: #166a48;
+}
+
+/* Banner logo */
+.banner-logo {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1% 1% 0 1%;
+}
+
+/* Círculo logo */
+.logo-circular {
+  background-color: white;
+  border: 8px solid var(--tertiary-color);
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 18px var(--card-shadow);
+}
+
+.logo-circular img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .logo-circular {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-circular {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.alianza-img {
+  height: 400px;            /* Ajusta según el diseño deseado */
+  object-fit: contain;      /* Mantiene la proporción sin recortar */
+  width: 100%;              /* Asegura que ocupen todo el ancho disponible */
+}
+
+.card-aztecbot {
+  background-color: var(--complementary-1);
+  color: var(--text-color);
+  
+}
+
+.card-labdatos {
+  background-color: var(--complementary-2);
+  color: var(--text-color);
+
+}
+
+.card-aztecbot:hover,
+.card-labdatos:hover {
+  box-shadow: 0 8px 16px rgba(63, 81, 181, 0.3);
+  transform: scale(1.05);
+}
+
+.card-robotica {
+  background-color: var(--complementary-1);
+  color: var(--text-color);
+}
+
+.card-electronica {
+  background-color: var(--complementary-2);
+  color: var(--text-color);
+}
+
+.card-programacion {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.ods-full-width {
+  background-color: #e9f7ff; /* Fondo claro para la sección ODS */
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.ods-full-width {
+  background-color: #f0f8ff; /* Fondo general claro para sección */
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.card-ods {
+  max-width: 900px;
+  width: 100%;
+  background-color: pink; /* Azul fuerte para la tarjeta */
+  color: var(--text-color);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.imagen-ods {
+  margin: 1rem;
+  border-radius: 0.5rem;
+  max-width: 90%;
+  height: auto;
+  min-height: 220px;
+}
+
+.card-ods .card-body {
+  width: 60%;
+  padding: 1.5rem;
+}
+
+.card-ods .card-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.card-ods .card-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .card-ods {
+    flex-direction: column;
+  }
+
+  .card-ods .card-img-left,
+  .card-ods .card-body {
+    width: 100%;
+  }
+
+  .card-ods .card-img-left {
+    min-height: 180px;
+  }
+}
+
+/* Fondo y texto del overlay */
+.carousel-overlay {
+  position: 45%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Cubrir todo el alto del carrusel */
+  background: var(--complementary-1);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  z-index: 1;
+}
+
+/* Tipografía del overlay */
+.carousel-overlay h4 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.carousel-overlay p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Control de dimensiones de cada imagen del carrusel */
+#img-carrusel-1 {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  object-position: center;
+}
+
+#img-carrusel-2 {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  object-position: top;
+}
+
+#img-carrusel-3 {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Tamaño general del carrusel */
+#carouselInicio {
+  height: 500px; /* Aumentado para más espacio vertical */
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel-item {
+  height: 100%;
+}
+
+.carousel-item img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.carousel-overlay h4 {
+  font-size: 1.5rem;
+  margin: 0 0 5px;
+}
+
+.carousel-overlay p {
+  font-size: 1rem;
+  margin: 0;
+}
